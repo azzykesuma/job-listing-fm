@@ -82,7 +82,7 @@ const displayCard = (item:Job):boolean => {
         <div v-for="(filter,index) in filterData" :key="index" class="filter_pill">
           <p>{{ filter }}</p>
           <button @click="removeFilter(filter)">
-            <img src="./images/icon-remove.svg" alt="close-icon">
+            <img src="/images/icon-remove.svg" alt="close-icon">
           </button>
         </div>
       </div>
