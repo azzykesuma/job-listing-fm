@@ -22,7 +22,7 @@ const filterData = ref<string[]>([])
 // fetching jsondata on mounted
 onMounted(async () => {
   try {
-    const response = await fetch('./data.json');
+    const response = await fetch('/data.json');
     jobData.value = await response.json()
   } catch (error) {
     console.error('error')
