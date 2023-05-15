@@ -20,6 +20,7 @@ interface Job {
 const jobData = ref<Job[] | null>(null)
 const filterData = ref<string[]>([])
 // fetching jsondata on mounted
+
 onMounted(async () => {
   try {
     const response = await fetch('/data.json');
@@ -30,7 +31,7 @@ onMounted(async () => {
 })
 // dynamic logo image fetch
 const getLogoImage = (logo:string):string => {
-  return `./src/${logo}`
+  return `${logo}`
 }
 
 const filter = (filter:string) => {
@@ -69,9 +70,9 @@ const displayCard = (item:Job):boolean => {
 <template>
   <header>
     <picture>
-      <source media="(max-width: 750px)" srcset="./images/bg-header-mobile.svg">
-      <source media="(min-width: 750px)" srcset="./images/bg-header-desktop.svg">
-      <img src="./images/bg-header-mobile.svg" alt="Header Background">
+      <source media="(max-width: 750px)" srcset="/images/bg-header-mobile.svg">
+      <source media="(min-width: 750px)" srcset="/images/bg-header-desktop.svg">
+      <img src="/images/bg-header-mobile.svg" alt="Header Background">
     </picture>
   </header>
 
